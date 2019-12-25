@@ -242,8 +242,10 @@
 									<% } %>
 
 								</tbody>
-								<button class="btn btn-primary">더보기</button>
 							</table>
+							<br>
+							<hr>
+							<button class="btn btn-block btn-dark btn-lg" id="more">더보기</button>
 						</div>
 					</div>
 				</div>
@@ -277,12 +279,16 @@
 
 			$(window).scroll(function() {
 			    if ($(window).scrollTop() == $(document).height() - $(window).height()) {
-			      	alert('hi');
+			      	//alert('hi');
 			      	if(searchMode==false){
 			      		//loadMoreData();	
 			      	}
 			      	
 			    }
+			});
+
+			$('#more').click(()=>{
+				loadMoreData();
 			});
 
 
