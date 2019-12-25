@@ -1,0 +1,49 @@
+<% if (type==1){ %>
+	<% for (var i=start;i!=end;++i){ %>
+		<tr>
+			<td class="column1"><%= list4[i].assignDate %></td>
+			<td class="column2"><%= list4[i].shareDate %></td>
+			<td class="column3"><%= list4[i].code %></td>
+			<td class="column4"><%= list4[i].name %></td>
+			<td class="column5"><%= list4[i].dividend %><i class="fas fa-won-sign"></i></td>
+			<td class="column6"><%= list4[i].dividendPercent %>%</td>
+			<td class="column7"><%= list4[i].market %></td>
+			<td class="column8"><%= list4[i].shareType %></td>
+			<td class="column9"><%= list4[i].stockType %></td>
+			<td class="column10"><%= list4[i].unit %><i class="fas fa-won-sign"></i></td>
+			<td class="column11"><%= list4[i].setMonth %></td>
+		</tr>
+	<% } %>
+<% } else if (type==2) { %>
+		<% for (var i=start;i!=end;++i){ %>
+			<tr>
+				<td class="column1"><%= list2[i].assignDate %></td>
+				<td class="column2"><%= list2[i].shareDate %></td>
+				<td class="column3"><%= list2[i].code %></td>
+				<td class="column4"><%= list2[i].name %></td>
+				<td class="column5"><%= list2[i].dividend %><i class="fas fa-won-sign"></i></td>
+				<td class="column6"><%= list2[i].dividendPercent %>%</td>
+				<td class="column7"><%= list2[i].market %></td>
+				<td class="column8"><%= list2[i].shareType %></td>
+				<td class="column9"><%= list2[i].stockType %></td>
+				<td class="column10"><%= list2[i].unit %><i class="fas fa-won-sign"></i></td>
+				<td class="column11"><%= list2[i].setMonth %></td>
+			</tr>
+		<% } %>
+<% } else if (type==3) { %>  <!--18best//-->
+		<% for (var i=start;i!=end;++i){ %>
+			<tr>
+				<td class="column1"><%= list3[i].assignDate %></td>
+				<td class="column2"><%= list3[i].shareDate %></td>
+				<td class="column3"><%= list3[i].code %></td>
+				<td class="column4"><%= list3[i].name %></td>
+				<td class="column5"><%= list3[i].dividend %><i class="fas fa-won-sign"></i></td>
+				<td class="column6"><%= list3[i].dividendPercent %>%</td>
+				<td class="column7"><%= list3[i].market %></td>
+				<td class="column8"><%= list3[i].shareType %></td>
+				<td class="column9"><%= list3[i].stockType %></td>
+				<td class="column10"><%= list3[i].unit %><i class="fas fa-won-sign"></i></td>
+				<td class="column11"><%= list3[i].setMonth %></td>
+			</tr>
+		<% } %>	
+<% } %>

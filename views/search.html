@@ -1,0 +1,49 @@
+<% if (search!=undefined){ %>
+	
+	<% if(list1[search]!=undefined){ %>
+
+		<tr>
+			<td class="column1"><%= list1[search].assignDate %></td>
+			<td class="column2"><%= list1[search].shareDate %></td>
+			<td class="column3"><%= list1[search].code %></td>
+			<td class="column4"><%= list1[search].name %></td>
+			<td class="column5"><%= list1[search].dividend %><i class="fas fa-won-sign"></i></td>
+			<td class="column6"><%= list1[search].dividendPercent %>%</td>
+			<td class="column7"><%= list1[search].market %></td>
+			<td class="column8"><%= list1[search].shareType %></td>
+			<td class="column9"><%= list1[search].stockType %></td>
+			<td class="column10"><%= list1[search].unit %><i class="fas fa-won-sign"></i></td>
+			<td class="column11"><%= list1[search].setMonth %></td>
+		</tr>
+
+
+	<% } else { %>
+
+
+		<% for (var i=0;i!=Object.keys(list1).length;++i){ %>
+				<% var str=list1[Object.keys(list1)[i]].name; %>
+				<% if(str.includes(search)) { %>
+
+					<tr>
+						<td class="column1"><%= list1[Object.keys(list1)[i]].assignDate %></td>
+						<td class="column2"><%= list1[Object.keys(list1)[i]].shareDate %></td>
+						<td class="column3"><%= list1[Object.keys(list1)[i]].code %></td>
+						<td class="column4"><%= list1[Object.keys(list1)[i]].name %></td>
+						<td class="column5"><%= list1[Object.keys(list1)[i]].dividend %><i class="fas fa-won-sign"></i></td>
+						<td class="column6"><%= list1[Object.keys(list1)[i]].dividendPercent %>%</td>
+						<td class="column7"><%= list1[Object.keys(list1)[i]].market %></td>
+						<td class="column8"><%= list1[Object.keys(list1)[i]].shareType %></td>
+						<td class="column9"><%= list1[Object.keys(list1)[i]].stockType %></td>
+						<td class="column10"><%= list1[Object.keys(list1)[i]].unit %><i class="fas fa-won-sign"></i></td>
+						<td class="column11"><%= list1[Object.keys(list1)[i]].setMonth %></td>
+					</tr>
+
+				<% } %>
+
+		<% } %>
+
+
+	<% } %>
+
+
+<% } %>
