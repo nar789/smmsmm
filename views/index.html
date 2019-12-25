@@ -242,6 +242,7 @@
 									<% } %>
 
 								</tbody>
+								<button class="btn btn-primary">더보기</button>
 							</table>
 						</div>
 					</div>
@@ -276,9 +277,9 @@
 
 			$(window).scroll(function() {
 			    if ($(window).scrollTop() == $(document).height() - $(window).height()) {
-			      
-			      	if(!searchMode){
-			      		loadMoreData();	
+			      	alert('hi');
+			      	if(searchMode==false){
+			      		//loadMoreData();	
 			      	}
 			      	
 			    }
