@@ -291,6 +291,13 @@
 				loadMoreData();
 			});
 
+			$("#keyword").keypress(function(e) {
+			 	if (e.keyCode === 13) {
+			  		e.preventDefault(); 
+			  		search();
+			  	} 
+			});
+
 
 			function loadMoreData(){
 				start=end+1;
@@ -303,6 +310,10 @@
 			}
 
 			$('#searchbtn').click(()=>{
+				search();
+			});
+
+			function search(){
 				var keyword = $('#keyword').val();
 				keyword=encodeURIComponent(keyword);
 				var url = `/search?search=${keyword}`;
@@ -310,8 +321,9 @@
 				$.get(url,(d,e)=>{
 					$('tbody').html(d);
 					searchMode=true;
+					$('#more').hide();
 				});
-			});
+			}
 		</script>
 	</body>
 </html>
