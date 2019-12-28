@@ -52,6 +52,13 @@
 					res.render('naver369600b9522b96cb0b63b2bc39396558.html',{});
 				});
 			});
+			//http://smmsmm.shop/robots.txt
+			app.get('/robots.txt',function(req,res){
+				loginCheckRouteHook(()=>{
+					res.render('robots.txt',{});
+				});
+			});
+
 
 			//1. enetry point
 			app.listen(1225,function(){
