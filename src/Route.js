@@ -55,7 +55,8 @@
 			//http://smmsmm.shop/robots.txt
 			app.get('/robots.txt',function(req,res){
 				loginCheckRouteHook(()=>{
-					res.render('robots.txt',{});
+					res.send(`User-agent: *
+Allow:/`)
 				});
 			});
 
