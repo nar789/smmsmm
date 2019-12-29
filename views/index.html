@@ -32,12 +32,7 @@
 		<!--adsense//-->
 		<script data-ad-client="ca-pub-7996546195745496" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
-		<!--daum ad//-->
-		<ins class="kakao_ad_area" style="display:none;" 
-		 data-ad-unit    = "DAN-1hux8dsf1qn93" 
-		 data-ad-width   = "320" 
-		 data-ad-height  = "100"></ins> 
-		<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+		
 
 
 
@@ -129,9 +124,7 @@
 
 		</style>
 	</head>
-	<body>
-
-
+	<body style="background-color: black;">
 				<!-- Navigation -->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
 		  <div class="container">
@@ -167,6 +160,8 @@
 		  </div>
 		</nav>
 
+		
+
 		<!-- Full Page Image Header with Vertically Centered Content -->
 		<header class="masthead">
 			<div class="bgdark">
@@ -191,6 +186,15 @@
 		</header>
 
 		<!-- Page Content -->
+		<!--daum ad//-->
+		<div style="background-color: black;margin: 0px;text-align: center;" id="ad-group">
+			<a href='#'><p onclick="adclose()" style="float: right;color:white;z-index: 100;font-size: 13px;" class="mr-3">닫기</p></a>
+			<ins class="kakao_ad_area" style="display:none;" 
+			 data-ad-unit    = "DAN-1hux8dsf1qn93" 
+			 data-ad-width   = "300" 
+			 data-ad-height  = "250"></ins> 
+			<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+		</div>
 		
 
 
@@ -364,6 +368,10 @@
 					searchMode=true;
 					$('#more').hide();
 				});
+			}
+
+			function adclose(){
+				$('#ad-group').css('display',"none");
 			}
 		</script>
 	</body>
