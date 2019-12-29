@@ -56,7 +56,14 @@
 			app.get('/robots.txt',function(req,res){
 				loginCheckRouteHook(()=>{
 					res.send(`User-agent: *
-Allow:/`)
+Allow:/`);
+				});
+			});
+
+
+			app.get('/pinfo',function(req,res){
+				loginCheckRouteHook(()=>{
+					res.render('pinfo.html',{});
 				});
 			});
 
